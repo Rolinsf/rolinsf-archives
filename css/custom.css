@@ -1,3 +1,25 @@
-.post-body p{
-    text-indent: 2em;
+全局文章段落首行缩进（适配所有文章）
+.post-content p {
+  text-indent: 2em !important; /* 2em 对应两个汉字宽度，适合中文 */
+  margin: 0.6em 0; /* 可选：调整段落上下间距，优化排版 */
+}
+
+/* 适配暗色模式（如果开启了 dark_mode） */
+html[data-user-color-scheme="dark"] .post-content p {
+  text-indent: 2em !important;
+}
+
+/* 排除特殊元素（避免代码块、列表等被缩进） */
+.post-content pre,        /* 代码块 */
+.post-content blockquote, /* 引用块 */
+.post-content table,      /* 表格 */
+.post-content ul,         /* 无序列表 */
+.post-content ol,         /* 有序列表 */
+.post-content h1,         /* 标题 */
+.post-content h2,
+.post-content h3,
+.post-content h4,
+.post-content h5,
+.post-content h6 {
+  text-indent: 0 !important; /* 强制取消这些元素的缩进 */
 }
