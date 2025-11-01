@@ -22,3 +22,8 @@ html[data-user-color-scheme="dark"] .post-content p,
 html[data-user-color-scheme="dark"] .post-content div {
   text-indent: 2em !important;
 } */
+p {
+  text-indent: 2em;
+  margin: 0.8em 0;
+  line-height: 1.8;
+}
